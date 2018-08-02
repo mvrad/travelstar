@@ -1,7 +1,7 @@
 # TravelStar
 ![screenshot](public/img/screenshot.jpg)
 
-Search points of interest, .
+Search points of interest, attractions, media, and maps of different locations around the world.
 ## Under the Hood
 Made with :coffee: and Visual Studio Code in a Linux environment (Linux Mint 19 "Tara" w/ Ubuntu "Bionic" Package Base).
 ## To Set Up Locally
