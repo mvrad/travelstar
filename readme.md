@@ -3,7 +3,7 @@
 
 Search points of interest, attractions, media, and maps of different locations around the world.
 ## Under the Hood
-Made with :coffee: and Visual Studio Code in a Linux environment (Linux Mint 19 "Tara" w/ Ubuntu "Bionic" Package Base).
+Made with :coffee: and Visual Studio Code in a Linux OS.
 ## To Set Up Locally
 You can take all the files of this site and run them on your computer as if it were live online, only it's just on your machine. This project uses the [Sygic](https://travel.sygic.com/en/b2b) API to retrieve data about certain places around the world.
 ### Requirements
