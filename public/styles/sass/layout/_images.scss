@@ -1,0 +1,15 @@
+/*==============================================================================
+Images
+==============================================================================*/
+
+.bg {
+  background: #fff url("/img/bg.jpg") no-repeat center/cover;
+  height: calc(100vh - 60px);
+  width: auto;
+  margin: 0;
+}
+
+#main-logo {
+  width: 54px;
+  height: auto;
+}

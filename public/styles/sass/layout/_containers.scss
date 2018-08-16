@@ -1,0 +1,28 @@
+/*==============================================================================
+Containers
+==============================================================================*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+}
+
+.nav:nth-child(2) {
+  margin-left: 1200px;
+}
+
+#menu-lg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 50%;
+}
