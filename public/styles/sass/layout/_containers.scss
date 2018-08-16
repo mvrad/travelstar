@@ -19,9 +19,13 @@ header {
   @extend %flex-center;
   width: 1200px;
   height: 700px;
-  background-color: #000;
-  opacity: .4;
+  background-color:rgba(0,0,0,0.5);
   margin: auto;
+}
+
+#about {
+  text-align: center;
+  color: #fff;
 }
 
 #copyright {
