@@ -11,4 +11,9 @@
 |
 */
 
-Route::view('/', 'home');
+Route::view('/', 'pages.home');
+Route::view('/about', 'pages.about');
+Route::view('/attractions', 'pages.attractions');
+Route::view('/activities', 'pages.activities');
+Route::view('/media', 'pages.media');
+Route::view('/map', 'pages.map');

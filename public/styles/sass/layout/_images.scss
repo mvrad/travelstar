@@ -4,9 +4,10 @@ Images
 
 .bg {
   background: #fff url("/img/bg.jpg") no-repeat center/cover;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 120px);
   width: auto;
   margin: 0;
+  @extend %flex-center;
 }
 
 #main-logo {

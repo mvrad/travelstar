@@ -2,19 +2,41 @@
 Typography
 ==============================================================================*/
 
+h1, header li {
+  font-family: "Merriweather", "sans-serif";
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+header li {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #808080;
+  margin-left: 30px;
+}
+
+a {
+  color: #808080;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+p {
+  font-family: "Montserrat", "sans-serif";
+  margin: 0;
+}
+
 #main-logo-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 }
 
 #main-logo-txt {
   padding-left: 10px;
   margin: 0;
-}
-
-li {
-  margin-left: 20px;
 }
