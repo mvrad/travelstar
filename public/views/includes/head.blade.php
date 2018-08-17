@@ -18,3 +18,4 @@
 <!-- Stylesheets -->
 <link href="styles/css/app.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400|Montserrat:400,600,700" rel="stylesheet">
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
