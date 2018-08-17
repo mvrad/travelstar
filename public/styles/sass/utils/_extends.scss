@@ -2,9 +2,18 @@
 Extends
 ==============================================================================*/
 
-%flex-center {
+%flex-center-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-center-col {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;

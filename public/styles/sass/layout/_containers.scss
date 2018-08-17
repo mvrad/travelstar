@@ -3,20 +3,20 @@ Containers
 ==============================================================================*/
 
 header {
-  @extend %flex-center;
+  @extend %flex-center-row;
   background-color: #fff;
   width: 100%;
   height: 60px;
 }
 
 #menu-lg {
-  @extend %flex-center;
+  @extend %flex-center-row;
   padding: 0;
   margin-left: 40%;
 }
 
 .modal {
-  @extend %flex-center;
+  @extend %flex-center-row;
   width: 1200px;
   height: 700px;
   background-color:rgba(0,0,0,0.5);
@@ -25,7 +25,41 @@ header {
 
 // Home
 
-  
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 5px 0;
+  margin-bottom: 15px;
+}
+
+input, #dates-wrapper {
+  width: 276.719px;
+  height: auto;
+}
+
+#home {
+  @extend %flex-center-col;
+  text-align: center;
+}
+
+#home div:first-child {
+  @extend %flex-center-col;
+}
+
+#home div:nth-child(2) {
+  @extend %flex-center-row;
+}
+
+#from {
+  margin-right: calc(276.719px - 240px);
+}
+
+.dates {
+  width: 120px;
+  height: auto;
+}
 
 // About
 
@@ -55,7 +89,7 @@ header {
 }
 
 #copyright {
-  @extend %flex-center;
+  @extend %flex-center-row;
   width: 100%;
   height: 60px;
 }

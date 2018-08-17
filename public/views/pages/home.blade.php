@@ -2,28 +2,32 @@
 @section('title', 'Home')
 @section('content')
 <!-- Home -->
-<div id="home">
+<!-- <form id="home" method="GET" action=""> -->
+<form id="home">
   <!-- Destination -->
   <div>
-    <h2>Where are you going?</h2>
+    <label for="destination">Where are you going?</label>
     <input type="text" id="destination" name="destination" placeholder="Destination">
   </div>
   <!-- /.Destination -->
   <!-- Dates -->
-  <h2>When are you going?</h2>
-  <div>
+  <div id="dates-wrapper">
+    <label for="dates">When are you going?</label>
     <!-- From -->
     <div>
-      <input type="text" id="from" name="from" placeholder="From">
+      <input type="text" id="from" class="dates" name="dates" placeholder="From">
     </div>
     <!-- /.From -->
     <!-- To -->
     <div>
-      <input type="text" id="to" name="to" placeholder="To">
+      <input type="text" id="to" class="dates" name="dates" placeholder="To">
     </div>
     <!-- /.To -->
   </div>
   <!-- /.Dates -->
-</div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
 <!-- /.Home -->
 @stop

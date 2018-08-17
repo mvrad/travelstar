@@ -2,7 +2,7 @@
 Typography
 ==============================================================================*/
 
-h1, h2, h3, header li {
+h1, h2, h3, header li, label {
   font-family: "Merriweather", "sans-serif";
 }
 
@@ -11,7 +11,7 @@ h1 {
   font-weight: 400;
 }
 
-h2 {
+h2, label {
   font-size: 1.4em;
 }
 
@@ -40,8 +40,12 @@ p, input {
   font-family: "Montserrat", "sans-serif";
 }
 
+label {
+  font-weight: 700;
+}
+
 #main-logo-container {
-  @extend %flex-center;
+  @extend %flex-center-row;
 }
 
 #main-logo-txt {
@@ -51,7 +55,7 @@ p, input {
 
 // Home
 
-#home h2 {
+#home label {
   color: #fff;
 }
 

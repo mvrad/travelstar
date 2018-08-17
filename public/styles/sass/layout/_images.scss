@@ -7,7 +7,7 @@ Images
   height: calc(100vh - 60px);
   width: auto;
   margin: 0;
-  @extend %flex-center;
+  @extend %flex-center-row;
 }
 
 #main-logo {

@@ -29,9 +29,9 @@ $(() => {
     headers: {"x-api-key": akey},
     dataType: "json",
     success: (data) => {
-      console.log("success", data);
-      // let places = data.places;
+      // console.log("success", data);
       // $.each(data.results, (i) => {
+
       // });
     }
   });
