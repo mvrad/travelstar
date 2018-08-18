@@ -10,7 +10,29 @@ Images
   @extend %flex-center-row;
 }
 
+@media (max-width: 1024px) {
+  .bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),
+    url("/img/bg.jpg") no-repeat center/cover;
+  }
+}
+
 #main-logo {
   width: 54px;
   height: auto;
+}
+
+// Home
+
+#destination {
+  background-image: url("/img/marker_gray.svg");
+  background-position: 10px;
+  background-repeat: no-repeat;
+}
+
+.dates {
+  background-image: url("/img/calendar_gray.svg");
+  background-position: 5px;
+  background-repeat: no-repeat;
 }
