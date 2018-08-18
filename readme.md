@@ -24,6 +24,12 @@ After installing Homestead, launch the Vagrant VM from within the Homestead dire
 ```bash
 vagrant up
 ```
+You'll also need to create a *config.js* file in the public/js directory containing the Sygic API Key:
+```javascript
+const config = {
+  KEY : "api_key"
+};
+```
 If everything went well, you should be able to visit *travelstar.test* in the browser.
 ## License
 TravelStar is licensed under the [MIT license](https://github.com/matthew-conrad/travelstar/blob/master/LICENSE).

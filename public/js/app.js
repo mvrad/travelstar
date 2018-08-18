@@ -3,7 +3,7 @@ $(() => {
   "use strict";
 
   // Globals
-  const akey = process.env.API_KEY,
+  const akey = config.KEY,
     sygicAPI = "https://api.sygictravelapi.com/1.0/en/places/list?query=";
 
   // Set focus to fields
