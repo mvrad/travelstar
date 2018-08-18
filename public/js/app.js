@@ -36,4 +36,9 @@ $(() => {
     }
   });
 
+  // Ping app every 5 minutes
+  setInterval(function() {
+    http.get("https://travelstar.herokuapp.com");
+  }, 300000);
+
 }); // End doc ready
