@@ -1,6 +1,6 @@
-/*==============================================================================
+/*================
 Containers
-==============================================================================*/
+================*/
 
 header {
   @extend %flex-center-row;
@@ -9,10 +9,35 @@ header {
   height: 60px;
 }
 
-#menu-lg {
+.nav-sm {
+  display: block;
+}
+.mobile-menu__nav {
+  display: block;
+}
+.nav-lg {
+  display: none;
+}
+.menu-lg {
+  display: none;
   @extend %flex-center-row;
   padding: 0;
   margin-left: 40%;
+}
+
+@media (min-width: 823px) {
+  .nav-sm {
+    display: none;
+  }
+  .mobile-menu__nav {
+    display: none;
+  }
+  .nav-lg {
+    display: flex;
+  }
+  .menu-lg {
+    display: flex;
+  }
 }
 
 @media (min-width: 1025px) {

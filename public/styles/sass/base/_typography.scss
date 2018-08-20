@@ -1,6 +1,6 @@
-/*==============================================================================
+/*================
 Typography
-==============================================================================*/
+================*/
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Montserrat:400,600,700');
@@ -58,7 +58,7 @@ input[type=submit] {
   font-weight: 700;
 }
 
-#main-logo-container {
+.nav-lg {
   @extend %flex-center-row;
 }
 
