@@ -6,6 +6,14 @@ $(() => {
   const akey = config.KEY,
     sygicAPI = "https://api.sygictravelapi.com/1.0/en/places/list?query=";
 
+  // Hamburger menu animation
+  $(".hamburger").on("click", () => {
+    $(".hamburger").toggleClass("is-active");
+    if ($(".hamburger").hasClass("is-active")) {
+      $(".header").animate({marginTop: "0", height: "100vh"})
+    } else ($(".header").animate({marginTop: "-295px"}));
+  });
+
   // Set focus to fields
   $("#destination").focus();
 

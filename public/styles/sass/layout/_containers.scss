@@ -2,6 +2,8 @@
 Containers
 ================*/
 
+// Header
+
 header {
   @extend %flex-center-row;
   background-color: #fff;
@@ -9,29 +11,41 @@ header {
   height: 60px;
 }
 
-.nav-sm {
-  display: block;
-}
-.mobile-menu__nav {
-  display: block;
-}
-.nav-lg {
-  display: none;
-}
 .menu-lg {
-  display: none;
   @extend %flex-center-row;
   padding: 0;
   margin-left: 40%;
 }
 
-@media (min-width: 823px) {
+.nav-sm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+}
+.nav-sm-title {
+  @extend %flex-center-row;
+}
+.menu-sm {
+  display: block;
+} 
+.nav-lg {
+  display: none;
+}
+.menu-lg {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .nav-sm {
     display: none;
   }
-  .mobile-menu__nav {
+  .menu-sm {
     display: none;
-  }
+  } 
   .nav-lg {
     display: flex;
   }
@@ -39,6 +53,8 @@ header {
     display: flex;
   }
 }
+
+// Modal
 
 @media (min-width: 1025px) {
   .modal {
