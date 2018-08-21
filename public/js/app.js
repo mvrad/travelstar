@@ -44,4 +44,12 @@ $(() => {
     }
   });
 
+  // On keyup in destination input, get search values and append
+  // values to a dropdown menu which displays immediately upon
+  // keyup.
+
+  // On submit button click, switch layout to "/attractions".
+
+  // Append /home input values to top left corner of modal window.
+
 }); // End doc ready

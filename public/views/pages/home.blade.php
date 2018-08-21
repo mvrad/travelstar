@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Home')
-@section('content')
+@section('home')
 <!-- Home -->
 <!-- <form id="home" method="GET" action=""> -->
 <form id="home">
@@ -26,7 +26,7 @@
   </div>
   <!-- /.Dates -->
   <div>
-    <input type="submit" value="Submit">
+    <input id="search" type="submit" value="Submit">
   </div>
 </form>
 <!-- /.Home -->

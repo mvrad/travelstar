@@ -2,6 +2,8 @@
 Images
 ================*/
 
+// Background
+
 .bg {
   background: #fff url("/img/bg.jpg") no-repeat center/cover;
   height: calc(100vh - 60px);
@@ -17,6 +19,8 @@ Images
     url("/img/bg.jpg") no-repeat center/cover;
   }
 }
+
+// Navbar
 
 #main-logo-sm, #main-logo-lg {
   width: 54px;

@@ -18,12 +18,7 @@ header {
 }
 
 .nav-sm {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
+  @extend %flex-space-between;
   width: 100%;
 }
 .nav-sm-title {

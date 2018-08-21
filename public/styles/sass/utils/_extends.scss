@@ -2,6 +2,8 @@
 Extends
 ================*/
 
+// Flexbox
+
 %flex-center-row {
   display: flex;
   flex-direction: row;
@@ -16,6 +18,15 @@ Extends
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+%flex-space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
 }
