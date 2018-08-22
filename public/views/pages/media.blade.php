@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('pages.search')
 @section('title', 'Media')
-@section('content')
+@section('search-content')
 <div>
   
 </div>

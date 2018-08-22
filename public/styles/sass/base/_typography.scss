@@ -36,9 +36,21 @@ a {
 }
 
 a:hover {
-  color: #000;
   text-decoration: underline;
   transition: 0.4s;
+}
+
+.main-header-2 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.main-header-2 a:hover {
+  color: #fff;
+}
+
+.active h3 {
+  color: #fff;
 }
 
 p, input, .dropdown {
@@ -82,4 +94,10 @@ input[type=submit] {
 
 #font-reg {
   font-weight: 400;
+}
+
+// Attractions
+
+.main-header-1 h3 {
+  color: #fff;
 }

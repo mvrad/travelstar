@@ -53,7 +53,21 @@ $(() => {
     } // End if else statement
   }); // End keyup() function
 
-  // On submit button click, switch layout to "/attractions".
+  const pathname = window.location.pathname;
+  switch(pathname) {
+    case "/attractions" :
+      $("#attractions").toggleClass("active");
+      break;
+    case "/activities" :
+      $("#activities").toggleClass("active");
+      break;
+    case "/media" :
+      $("#media").toggleClass("active");
+      break;
+    case "/map" :
+      $("#map").toggleClass("active");
+      break;
+  } // End switch()
 
   // Append /home input values to top left corner of modal window.
 

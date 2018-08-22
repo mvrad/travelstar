@@ -30,3 +30,29 @@ Extends
   align-items: center;
   align-content: center;
 }
+
+%flex-space-around {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+// Grid
+
+%grid-main-header-1 {
+  display: grid;
+  grid-template-rows: 1fr 12fr;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+%grid-main-header-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "sidebar" "sidebar";
+}

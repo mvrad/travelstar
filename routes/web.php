@@ -13,6 +13,7 @@
 
 Route::view('/', 'pages.home');
 Route::view('/about', 'pages.about');
+Route::view('/search', 'pages.search');
 Route::view('/attractions', 'pages.attractions');
 Route::view('/activities', 'pages.activities');
 Route::view('/media', 'pages.media');

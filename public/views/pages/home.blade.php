@@ -3,7 +3,7 @@
 @section('content')
 <!-- Home -->
 <!-- <form id="home" method="GET" action=""> -->
-<form id="home">
+<form id="home" action="/attractions">
   <!-- Destination -->
   <div>
     <label for="destination">Where are you going?</label>
@@ -35,7 +35,7 @@
   </div>
   <!-- /.Dates -->
   <div>
-    <input id="search" type="submit" value="Submit">
+    <input id="search" type="submit" form="home" value="Submit">
   </div>
 </form>
 <!-- /.Home -->
