@@ -129,6 +129,31 @@ input, #dates-wrapper {
   height: auto;
 }
 
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 276.719px;
+  height: 190px;
+  color: #000;
+  text-align: left;
+  background-color: #fff;
+  overflow: scroll;
+  margin-top: 120px;
+}
+
+.dropdown-list li {
+  padding: 10px 0 10px 10px;
+}
+
+.dropdown-list li:hover {
+  background-color: #cafcf6;
+  border-color: #9ecaed;
+}
+
+.is-active {
+  display: block;
+}
+
 // About
 
 #about {
