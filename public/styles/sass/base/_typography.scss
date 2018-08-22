@@ -36,7 +36,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #000080;
   transition: 0.4s;
 }
 
@@ -45,7 +45,7 @@ a:hover {
   text-decoration: none;
 }
 .active h3 {
-  color: #fff;
+  color: #000;
 }
 
 p, input, .dropdown {

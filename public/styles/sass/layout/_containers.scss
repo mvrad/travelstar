@@ -221,10 +221,16 @@ input, #dates-wrapper {
   line-height: 50px;
 }
 
-.main-header-2 a:hover, .active {
+.main-header-2 a:not(.active):hover {
+  color: #fff;
   background-color: #808080;
 }
 
+.active {
+  color: #000;
+  background-color: #fff;
+}
+
 .main-content {
-  background-color: #808080;
+  background-color: #fff;
 }
