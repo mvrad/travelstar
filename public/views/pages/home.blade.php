@@ -2,10 +2,9 @@
 @section('title', 'Home')
 @section('content')
 <!-- Home -->
-<!-- <form id="home" method="GET" action=""> -->
 <form id="home" action="/attractions">
-  <!-- Destination -->
   <div>
+    <!-- Destination -->
     <label for="destination">Where are you going?</label>
     <input type="text" id="destination" name="destination" placeholder="Destination">
     <div class="dropdown">
@@ -24,12 +23,12 @@
     <label for="dates">When are you going?</label>
     <!-- From -->
     <div>
-      <input type="text" id="from" class="dates" name="dates" placeholder="From">
+      <input type="text" id="from" class="dates" name="from" placeholder="From">
     </div>
     <!-- /.From -->
     <!-- To -->
     <div>
-      <input type="text" id="to" class="dates" name="dates" placeholder="To">
+      <input type="text" id="to" class="dates" name="to" placeholder="To">
     </div>
     <!-- /.To -->
   </div>

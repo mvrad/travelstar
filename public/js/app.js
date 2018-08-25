@@ -69,6 +69,25 @@ $(() => {
       break;
   } // End switch()
 
-  // Append /home input values to top left corner of modal window.
+  // Parses and returns URL parameters
+  function getUrlVars() {
+    let vars = {},
+      parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value) => {
+        // .replace(/\+/g, " ")
+        vars[key] = value.replace(/%2F/g, "/");
+      });
+    return vars;
+  } // End getUrlVars()
+  // Store getUrlVars() values in variables
+  let destination = getUrlVars()["destination"],
+    from = getUrlVars()["from"],
+    to = getUrlVars()["to"];
+  // Append input values to top left corner of modal window.
+  $("#main-header-destination").append(
+    `<h3>${destination}</h3>`
+  );
+  $("#main-header-dates").append(
+    `<h3>${from} &ndash; ${to}</h3>`
+  ); // End append()
 
 }); // End doc ready

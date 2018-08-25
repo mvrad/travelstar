@@ -4,11 +4,9 @@
 <div class="main">
   <div class="main-header">
     <div class="main-header-1">
-      <div>
-        <h3>Paris, France</h3>
+      <div id="main-header-destination">
       </div>
-      <div>
-        <h3>12/1/2018 &ndash; 12/8/2018</h3>
+      <div id="main-header-dates">
       </div>
     </div>
     <div class="main-header-2">
