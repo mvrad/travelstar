@@ -74,7 +74,7 @@ $(() => {
     let vars = {},
       parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value) => {
         // .replace(/\+/g, " ")
-        vars[key] = value.replace(/%2F/g, "/");
+        vars[key] = value.replace(/%2F|\+/g, "/");
       });
     return vars;
   } // End getUrlVars()
