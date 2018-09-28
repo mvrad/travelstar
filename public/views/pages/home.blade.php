@@ -34,7 +34,7 @@
   </div>
   <!-- /.Dates -->
   <div>
-    <input id="search" type="submit" form="home" value="Submit">
+    <input id="search" type="submit" form="home">
   </div>
 </form>
 <!-- /.Home -->

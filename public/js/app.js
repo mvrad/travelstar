@@ -29,7 +29,7 @@ $(() => {
     let search = $("#destination").val().toLowerCase().trim(),
     value = $.trim($("#destination").val());
     if (value.length > 0) {
-      $(".dropdown").addClass("is-active");
+      $(".dropdown, .is-active").show();
       $.ajax({
         type: "GET",
         url: sygicAPI + search,
@@ -44,14 +44,25 @@ $(() => {
           $("#name-5").html(places[4].name);
           $(".dropdown-list").on("click", ".list-name", (e) => {
             $("#destination").val($(e.target).text());
-            $(".dropdown").removeClass("is-active");
+            $(".dropdown, .is-active").hide();
           }); // End on click function
         } // End data
       }); // End Sygic API search
-    } else {
-      $(".dropdown").removeClass("is-active");
-    } // End if else statement
+    } // End if statement
   }); // End keyup() function
+
+  // Hide search drop down menu when clicking away
+  $(document).on("click", (e) => {
+    const searchContainer = $("#destination");
+    if (!searchContainer.is(e.target)) {
+      $(".dropdown, .is-active").hide();
+    }
+  }); // End on click function
+
+  // Show drop down menu when clicking back into search bar
+  $("#destination").click(function() {
+    $(".dropdown, .is-active").show();
+  }); // End click function
 
   const pathname = window.location.pathname;
   switch(pathname) {
@@ -73,8 +84,8 @@ $(() => {
   function getUrlVars() {
     let vars = {},
       parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (m,key,value) => {
-        // .replace(/\+/g, " ")
-        vars[key] = value.replace(/%2F|\+/g, "/");
+        vars[key] = value.replace(/\+/g, " ").replace(/%2F/g, "/").replace(/%C3%BC/g, "ü")
+          .replace(/%C3%B6/g, "ö").replace(/%C3%/g, "å").replace(/%27/g, "'");
       });
     return vars;
   } // End getUrlVars()
@@ -89,5 +100,19 @@ $(() => {
   $("#main-header-dates").append(
     `<h3>${from} &ndash; ${to}</h3>`
   ); // End append()
+
+  // Change href attribute on click
+  $("#attractions, #activities, #media, #map").on("click", (e) => {
+    let query = location.search;
+    if ($(e.currentTarget).is("#attractions")) {
+      $("#attractions").attr("href", `/attractions${query}`);
+    } else if ($(e.currentTarget).is("#activities")) {
+      $("#activities").attr("href", `/activities${query}`);
+    } else if ($(e.currentTarget).is("#media")) {
+      $("#media").attr("href", `/media${query}`);
+    } else if ($(e.currentTarget).is("#map")) {
+      $("#map").attr("href", `/map${query}`);
+    }
+  }); // End on click function
 
 }); // End doc ready
