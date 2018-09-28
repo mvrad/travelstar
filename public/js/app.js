@@ -115,4 +115,20 @@ $(() => {
     }
   }); // End on click function
 
+  // Get destination results for attractions, activities, media, and map
+  $("#search").on("click", (e) => {
+    let results = $("#destination").val().toLowerCase().trim();
+    event.preventDefault();
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + results,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let places = data.data.places;
+        console.log(places[0]);
+      } // End data
+    }); // End Sygic API Search
+  }); // End on click function
+
 }); // End doc ready
