@@ -4,7 +4,7 @@ $(() => {
 
   // Globals
   const akey = config.KEY,
-    sygicAPI = "https://api.sygictravelapi.com/1.0/en/places/list?query=";
+    sygicAPI = "https://api.sygictravelapi.com/1.0/en/";
 
   // Hamburger menu animation
   $(".hamburger").on("click", () => {
@@ -23,46 +23,6 @@ $(() => {
 
   // Get current year
   $("#year").text(new Date().getFullYear());
-
-  // Destination search
-  $("#destination").keyup((e) => {
-    let search = $("#destination").val().toLowerCase().trim(),
-    value = $.trim($("#destination").val());
-    if (value.length > 0) {
-      $(".dropdown, .is-active").show();
-      $.ajax({
-        type: "GET",
-        url: sygicAPI + search,
-        headers: {"x-api-key": akey},
-        dataType: "json",
-        success: (data) => {
-          let places = data.data.places;
-          $("#name-1").html(places[0].name);
-          $("#name-2").html(places[1].name);
-          $("#name-3").html(places[2].name);
-          $("#name-4").html(places[3].name);
-          $("#name-5").html(places[4].name);
-          $(".dropdown-list").on("click", ".list-name", (e) => {
-            $("#destination").val($(e.target).text());
-            $(".dropdown, .is-active").hide();
-          }); // End on click function
-        } // End data
-      }); // End Sygic API search
-    } // End if statement
-  }); // End keyup() function
-
-  // Hide search drop down menu when clicking away
-  $(document).on("click", (e) => {
-    const searchContainer = $("#destination");
-    if (!searchContainer.is(e.target)) {
-      $(".dropdown, .is-active").hide();
-    }
-  }); // End on click function
-
-  // Show drop down menu when clicking back into search bar
-  $("#destination").click(function() {
-    $(".dropdown, .is-active").show();
-  }); // End click function
 
   const pathname = window.location.pathname;
   switch(pathname) {
@@ -116,19 +76,26 @@ $(() => {
   }); // End on click function
 
   // Get destination results for attractions, activities, media, and map
-  $("#search").on("click", (e) => {
-    let results = $("#destination").val().toLowerCase().trim();
-    event.preventDefault();
+  $("#search").on("click", () => {
+    let search = $("#destination").val().toLowerCase().trim(),
+      querySearch = "places/list?query=" + search;
+      // topTenPOI = "places/list?query=" + search + "&level=poi&limit=10";
+    // event.preventDefault();
     $.ajax({
       type: "GET",
-      url: sygicAPI + results,
+      url: sygicAPI + querySearch,
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
-        let places = data.data.places;
-        console.log(places[0]);
-      } // End data
+        let obj = data.data.places[0].id;
+        console.log(obj);
+      },
+      error: (error) => {
+        console.log(`Error ${error}`);
+      }
     }); // End Sygic API Search
   }); // End on click function
+
+  // media = "places/" + id + "/media";
 
 }); // End doc ready

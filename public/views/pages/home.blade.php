@@ -7,15 +7,6 @@
     <!-- Destination -->
     <label for="destination">Where are you going?</label>
     <input type="text" id="destination" name="destination" placeholder="Destination">
-    <div class="dropdown">
-      <ul class="dropdown-list">
-        <li class="list-name" id="name-1"></li>
-        <li class="list-name" id="name-2"></li>
-        <li class="list-name" id="name-3"></li>
-        <li class="list-name" id="name-4"></li>
-        <li class="list-name" id="name-5"></li>
-      </ul>
-    </div>
   </div>
   <!-- /.Destination -->
   <!-- Dates -->
@@ -34,7 +25,7 @@
   </div>
   <!-- /.Dates -->
   <div>
-    <input id="search" type="submit" form="home">
+    <input type="submit" id="search" form="home">
   </div>
 </form>
 <!-- /.Home -->
