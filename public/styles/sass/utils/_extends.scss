@@ -52,7 +52,7 @@ Extends
 
 %grid-main-header-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas:
-    "sidebar" "sidebar";
+  "sidebar" "sidebar";
 }

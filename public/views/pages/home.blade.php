@@ -6,7 +6,8 @@
   <div>
     <!-- Destination -->
     <label for="destination">Where are you going?</label>
-    <input type="text" id="destination" name="destination" placeholder="Destination">
+    <input type="text" id="destination" name="destination" placeholder="Destination ex: Paris">
+    <input type="text" id="id" name="id" placeholder="Destination ID" readonly="readonly">
   </div>
   <!-- /.Destination -->
   <!-- Dates -->

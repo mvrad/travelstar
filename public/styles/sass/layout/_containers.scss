@@ -209,3 +209,40 @@ input, #dates-wrapper {
 .main-content {
   background-color: #fff;
 }
+
+#attractions-main {
+  @extend %grid-main-header-2;
+}
+
+.attractions-main__left {
+  height: 646.14px;
+  overflow: auto;
+}
+
+.attractions-main__left-list_container {
+  @extend %flex-space-between;
+}
+
+#attractions-main__left-list {
+  margin: 0 70px;
+}
+
+#attractions-main__left-list_container-num {
+  margin-right: 20px;
+}
+
+.attractions-main__left-list_container h3 {
+  margin-top: 20px;
+  max-width: 150px;
+}
+
+.attractions-main__right {
+  @extend %flex-center-col;
+  height: 646.14px;
+  overflow: auto;
+  margin: 0 40px;
+}
+
+#attractions-main__left-list li {
+  margin: 20px 0;
+}
