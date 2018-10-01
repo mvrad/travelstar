@@ -95,51 +95,22 @@ $(() => {
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
-        let places = data.data.places;
-        $("#attractions-main__left-list_container-content0").append(
-          `<img src="${places[0].thumbnail_url}">
-          <h3>${places[0].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content1").append(
-          `<img src="${places[1].thumbnail_url}">
-          <h3>${places[1].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content2").append(
-          `<img src="${places[2].thumbnail_url}">
-          <h3>${places[2].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content3").append(
-          `<img src="${places[3].thumbnail_url}">
-          <h3>${places[3].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content4").append(
-          `<img src="${places[4].thumbnail_url}">
-          <h3>${places[4].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content5").append(
-          `<img src="${places[5].thumbnail_url}">
-          <h3>${places[5].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content6").append(
-          `<img src="${places[6].thumbnail_url}">
-          <h3>${places[6].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content7").append(
-          `<img src="${places[7].thumbnail_url}">
-          <h3>${places[7].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content8").append(
-          `<img src="${places[8].thumbnail_url}">
-          <h3>${places[8].name}</h3>`
-        );
-        $("#attractions-main__left-list_container-content9").append(
-          `<img src="${places[9].thumbnail_url}">
-          <h3>${places[9].name}</h3>`
-        );
-      },
+        let i,
+          places = data.data.places;
+        for (i = 0; i < 11; i++) {
+          $("#attractions-main__left-list li").append(
+            `<div class="attractions-main__left-list_container-num">
+            </div>
+            <div class="attractions-main__left-list_container-content">
+            <img src="${places[i].thumbnail_url}">
+            <h3>${i + 1}. ${places[i].name}</h3>
+            </div>`
+          );
+        };
+      }, // End success callback
       error: (error) => {
         console.log(`Error ${error}`);
-      } // End callbacks
+      } // End success/error callbacks
     }); // End Sygic API Search
   }; // End window.onload function
 

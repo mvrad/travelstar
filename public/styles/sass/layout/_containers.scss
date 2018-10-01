@@ -220,11 +220,7 @@ input, #dates-wrapper {
 }
 
 .attractions-main__left-list_container {
-  @extend %flex-space-between;
-}
-
-#attractions-main__left-list {
-  margin: 0 70px;
+  text-align: center;
 }
 
 #attractions-main__left-list_container-num {
@@ -232,8 +228,9 @@ input, #dates-wrapper {
 }
 
 .attractions-main__left-list_container h3 {
-  margin-top: 20px;
-  max-width: 150px;
+  text-align: center;
+  max-width: 351.656px;
+  margin: 20px 0;
 }
 
 .attractions-main__right {
@@ -245,4 +242,8 @@ input, #dates-wrapper {
 
 #attractions-main__left-list li {
   margin: 20px 0;
+}
+
+#attractions-main__left-list img {
+  cursor: pointer;
 }
