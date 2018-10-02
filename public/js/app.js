@@ -4,7 +4,7 @@ $(() => {
 
   // Globals
   const akey = config.KEY,
-    sygicAPI = "https://api.sygictravelapi.com/1.0/en/";
+    sygicAPI = "https://api.sygictravelapi.com/1.1/en/";
 
   // Hamburger menu animation
   $(".hamburger").on("click", () => {
@@ -95,24 +95,71 @@ $(() => {
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
-        let i,
-          places = data.data.places;
-        for (i = 0; i < 11; i++) {
+        let places = data.data.places;
+        $.each(places, (i) => {
           $("#attractions-main__left-list li").append(
-            `<div class="attractions-main__left-list_container-num">
+            `<div class=attractions-main__left-list_container-num>
             </div>
-            <div class="attractions-main__left-list_container-content">
-            <img src="${places[i].thumbnail_url}">
+            <div class=attractions-main__left-list_container-content>
+            <img src=${places[i].thumbnail_url}>
             <h3>${i + 1}. ${places[i].name}</h3>
             </div>`
           );
-        };
+        }); // End append on left
+        $(".attractions-main__right").append(
+          `<br>
+          <h1>${places[0].name}</h1>
+          <br>
+          <img src=${places[0].thumbnail_url}>
+          <br><br>
+          <p>
+          <span class=bold>Local Name: </span>${places[0].original_name}
+          <br>
+          <span class=bold>Location: </span>${places[0].name_suffix}
+          <br><br>
+          ${places[0].perex}
+          </p>`
+        ); // End append on right
       }, // End success callback
       error: (error) => {
         console.log(`Error ${error}`);
       } // End success/error callbacks
     }); // End Sygic API Search
   }; // End window.onload function
+
+  $("#attractions-main").on("click", "img", (e) => {
+    let idSearch = $(e.currentTarget).attr("src").split("/")[4],
+      POISearch = "places/" + idSearch;
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + POISearch,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let place = data.data.place;
+        if ($(this).text() === "") {
+          $(".attractions-main__right").empty();
+          $(".attractions-main__right").append(
+            `<br>
+            <h3>${place.name}</h3>
+            <br>
+            <img src=${place.thumbnail_url}>
+            <br><br>
+            <p>
+            <span class=bold>Local Name: </span>${place.original_name}
+            <br>
+            <span class=bold>Location: </span>${place.name_suffix}
+            <br><br>
+            ${place.perex}
+            </p>`
+          ); // End append
+        } // End if statement
+      }, // End success callback
+      error: (error) => {
+        console.log(`Error ${error}`);
+      } // End success/error callbacks
+    }); // End Sygic API Search
+  }); // End on click function
 
   // media = "places/" + id + "/media";
 
@@ -127,7 +174,7 @@ $(() => {
       $("#media").attr("href", `/media${query}`);
     } else if ($(e.currentTarget).is("#map")) {
       $("#map").attr("href", `/map${query}`);
-    }
+    } // End else if statements
   }); // End on click function
 
 }); // End doc ready
