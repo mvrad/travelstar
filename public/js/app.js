@@ -141,7 +141,7 @@ $(() => {
           $(".attractions-main__right").empty();
           $(".attractions-main__right").append(
             `<br>
-            <h3>${place.name}</h3>
+            <h1>${place.name}</h1>
             <br>
             <img src=${place.thumbnail_url}>
             <br><br>
