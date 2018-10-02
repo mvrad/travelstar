@@ -247,3 +247,20 @@ input, #dates-wrapper {
 #attractions-main__left-list img {
   cursor: pointer;
 }
+
+// Media
+
+.media-main__list {
+  @extend %flex-space-between;
+  height: 646.14px;
+  overflow: auto;
+}
+
+.media-main__list img {
+  margin: 20px;
+}
+
+.media-main__list_container {
+  text-align: center;
+  margin-top: auto;
+}

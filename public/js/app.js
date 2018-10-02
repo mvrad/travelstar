@@ -85,7 +85,7 @@ $(() => {
     } // End if statement
   }); // End on click function
 
-  // Get destination results for attractions, activities, media, and map
+  // Get destination results for attractions
   if (window.location.href.indexOf("attractions") > -1) {
     let idSearch = $("#dest-id").text(),
       topTenPOI = "places/list?parents=" + idSearch + "&level=poi&limit=10";
@@ -104,14 +104,13 @@ $(() => {
             <img src=${places[i].thumbnail_url}>
             <h3>${i + 1}. ${places[i].name}</h3>
             </div>`
-          );
-        }); // End append on left
+          ); // End append on left
+        }); // End $.each() function
         $(".attractions-main__right").append(
           `<br>
           <h1>${places[0].name}</h1>
-          <br>
           <img src=${places[0].thumbnail_url}>
-          <br><br>
+          <br>
           <p>
           <span class=bold>Local Name: </span>${places[0].original_name}
           <br>
@@ -127,6 +126,7 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
+  // Get POI information on click
   $("#attractions-main").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
@@ -142,9 +142,8 @@ $(() => {
           $(".attractions-main__right").append(
             `<br>
             <h1>${place.name}</h1>
-            <br>
             <img src=${place.thumbnail_url}>
-            <br><br>
+            <br>
             <p>
             <span class=bold>Local Name: </span>${place.original_name}
             <br>
@@ -160,6 +159,30 @@ $(() => {
       } // End success/error callbacks
     }); // End Sygic API Search
   }); // End on click function
+
+  if (window.location.href.indexOf("media") > -1) {
+    let idSearch = $("#dest-id").text(),
+      mediaSearch = "places/" + idSearch + "/media";
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + mediaSearch,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let media = data.data.media;
+        $.each(media, (i) => {
+          let imgURL = media[i].url_template,
+            newURL = imgURL.replace(/({size})/, "400x200");
+          $(".media-main__list li").append(
+            `<img src=${newURL}>`
+          ); // End append
+        }); // End $.each() function
+      }, // End success callback
+      error: (error) => {
+        console.log(`Error ${error}`);
+      } // End success/error callbacks
+    }); // End Sygic API Search
+  }; // End window.onload function
 
   // media = "places/" + id + "/media";
 
