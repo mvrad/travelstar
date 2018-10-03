@@ -95,13 +95,15 @@ input[type=submit] {
   font-weight: 400;
 }
 
-// Attractions
-
 .main-header-1 h3 {
   color: #fff;
 }
 
-#attractions-main h1 {
+// Attractions / Activities / Dining
+
+#attractions-main h1,
+#activities-main h1,
+#dining-main h1 {
   text-align: center;
 }
 
@@ -109,9 +111,13 @@ input[type=submit] {
   font-weight: 700;
 }
 
-.attractions-main__right h1 {
+.attractions-main__right h1,
+.activities-main__right h1,
+.dining-main__right h1 {
   margin-top: 0;
 }
+
+// Media
 
 #media-main h1 {
   text-align: center;

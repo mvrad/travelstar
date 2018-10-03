@@ -162,7 +162,7 @@ input, #dates-wrapper {
   height: 60px;
 }
 
-// Attractions
+// Search
 
 .main {
   @extend %grid-main-header-1;
@@ -210,48 +210,85 @@ input, #dates-wrapper {
   background-color: #fff;
 }
 
-#attractions-main {
+// Attractions / Dining
+
+#attractions-main,
+#dining-main {
   @extend %grid-main-header-2;
 }
 
-.attractions-main__left {
+.attractions-main__left,
+.dining-main__left {
   height: 646.14px;
   overflow: auto;
 }
 
-.attractions-main__left-list_container {
+.attractions-main__left-list_container,
+.dining-main__left-list_container {
   text-align: center;
 }
 
-#attractions-main__left-list_container-num {
+#attractions-main__left-list_container-num,
+#dining-main__left-list_container-num {
   margin-right: 20px;
 }
 
-.attractions-main__left-list_container h3 {
+.attractions-main__left-list_container h3,
+.dining-main__left-list_container h3 {
   text-align: center;
   max-width: 351.656px;
   margin: 20px 0;
 }
 
-.attractions-main__right {
+.attractions-main__right,
+.dining-main__right {
   @extend %flex-center-col;
   height: 646.14px;
   overflow: auto;
   margin: 0 40px;
 }
 
-#attractions-main__left-list li {
+#attractions-main__left-list li,
+#dining-main__left-list li {
   margin: 20px 0;
 }
 
-#attractions-main__left-list img {
+#attractions-main__left-list img,
+#dining-main__left-list img {
   cursor: pointer;
 }
 
-// Media
+// Activities
 
-.media-main__list {
-  @extend %flex-space-between;
+.activities-main {
+  text-align: center;
+}
+
+.activities-main__list-img {
+  width: 500px;
+}
+
+.activities-main__list-img:first-child {
+  margin-top: 20px;
+}
+
+.activities-main__list-img:not(:first-child) {
+  margin-top: 100px;
+}
+
+.activities-main__list_container h1 {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.activities-main__list_container p {
+  text-align: left;
+  margin: 0 200px;
+}
+
+// Media / Activities
+
+#media-main, .activities-main {
   height: 646.14px;
   overflow: auto;
 }
@@ -260,7 +297,11 @@ input, #dates-wrapper {
   margin: 20px;
 }
 
-.media-main__list_container {
+.media-main__list_container,
+.activities-main__list-container {
   text-align: center;
   margin-top: auto;
 }
+
+// Map
+

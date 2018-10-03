@@ -21,14 +21,14 @@
             <h3>Activities<h3>
           </li>
         </a>
+        <a href="/dining" id="dining">
+          <li>
+            <h3>Dining<h3>
+          </li>
+        </a>
         <a href="/media" id="media">
           <li>
             <h3>Media<h3>
-          </li>
-        </a>
-        <a href="/map" id="map">
-          <li>
-            <h3>Map<h3>
           </li>
         </a>
       </ul>

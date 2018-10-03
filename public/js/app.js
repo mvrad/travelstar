@@ -32,11 +32,11 @@ $(() => {
     case "/activities" :
       $("#activities").toggleClass("active");
       break;
+    case "/dining" :
+      $("#dining").toggleClass("active");
+      break;
     case "/media" :
       $("#media").toggleClass("active");
-      break;
-    case "/map" :
-      $("#map").toggleClass("active");
       break;
   } // End switch()
 
@@ -126,7 +126,7 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
-  // Get POI information on click
+  // Get Attractions POI information on click
   $("#attractions-main").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
@@ -160,6 +160,116 @@ $(() => {
     }); // End Sygic API Search
   }); // End on click function
 
+  // Get destination results for activities
+  if (window.location.href.indexOf("activities") > -1) {
+    let idSearch = $("#dest-id").text(),
+      tourSearch = "tours/viator?parent_place_id=" + idSearch;
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + tourSearch,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let tours = data.data.tours;
+        $.each(tours, (i) => {
+          $(".activities-main__list li").append(
+            `<img class=activities-main__list-img src=${tours[i].photo_url}>
+            <h1>${tours[i].title}</h1>
+            <p>
+            <span class=bold>Price: </span>${tours[i].price}
+            <br>
+            <span class=bold>Duration: </span>${tours[i].duration}
+            <br>
+            <span class=bold>Rating: </span>${tours[i].rating}
+            <br><br>
+            ${tours[i].perex}
+            </p>`
+          ); // End append
+        }); // End $.each() function
+      }, // End success callback
+      error: (error) => {
+        console.log(`Error ${error}`);
+      } // End success/error callbacks
+    }); // End Sygic API Search
+  }; // End window.onload function
+
+  // Get destination results for activities
+  if (window.location.href.indexOf("dining") > -1) {
+    let idSearch = $("#dest-id").text(),
+      diningSearch = "places/list?parents=" + idSearch + "&categories=eating&limit=20";
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + diningSearch,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let dining = data.data.places;
+        $.each(dining, (i) => {
+          $("#dining-main__left-list li").append(
+            `<div class=dining-main__left-list_container-num>
+            </div>
+            <div class=dining-main__left-list_container-content>
+            <img src=${dining[i].thumbnail_url}>
+            <h3>${i + 1}. ${dining[i].name}</h3>
+            </div>`
+          ); // End append on left
+        }); // End $.each() function
+        $(".dining-main__right").append(
+          `<br>
+          <h1>${dining[0].name}</h1>
+          <img src=${dining[0].thumbnail_url}>
+          <br>
+          <p>
+          <span class=bold>Local Name: </span>${dining[0].original_name}
+          <br>
+          <span class=bold>Location: </span>${dining[0].name_suffix}
+          <br><br>
+          ${dining[0].perex}
+          </p>`
+        ); // End append on right
+      }, // End success callback
+      error: (error) => {
+        console.log(`Error ${error}`);
+      } // End success/error callbacks
+    }); // End Sygic API Search
+  }; // End window.onload function
+
+  // Get Dining POI information on click
+  $("#dining-main").on("click", "img", (e) => {
+    let idSearch = $(e.currentTarget).attr("src").split("/")[4],
+      POISearch = "places/" + idSearch;
+    console.log(idSearch);
+    $.ajax({
+      type: "GET",
+      url: sygicAPI + POISearch,
+      headers: {"x-api-key": akey},
+      dataType: "json",
+      success: (data) => {
+        let place = data.data.place;
+        if ($(this).text() === "") {
+          $(".dining-main__right").empty();
+          $(".dining-main__right").append(
+            `<br>
+            <h1>${place.name}</h1>
+            <img src=${place.thumbnail_url}>
+            <br>
+            <p>
+            <span class=bold>Local Name: </span>${place.original_name}
+            <br>
+            <span class=bold>Location: </span>${place.name_suffix}
+            <br><br>
+            ${place.perex}
+            </p>`
+          ); // End append
+        } // End if statement
+      }, // End success callback
+      error: (error) => {
+        console.log(`Error ${error}`);
+      } // End success/error callbacks
+    }); // End Sygic API Search
+  }); // End on click function
+
+  // Get destination results for media
   if (window.location.href.indexOf("media") > -1) {
     let idSearch = $("#dest-id").text(),
       mediaSearch = "places/" + idSearch + "/media";
@@ -184,19 +294,17 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
-  // media = "places/" + id + "/media";
-
   // Change href attribute on click
-  $("#attractions, #activities, #media, #map").on("click", (e) => {
+  $("#attractions, #activities, #dining, #media").on("click", (e) => {
     let query = location.search;
     if ($(e.currentTarget).is("#attractions")) {
       $("#attractions").attr("href", `/attractions${query}`);
     } else if ($(e.currentTarget).is("#activities")) {
       $("#activities").attr("href", `/activities${query}`);
+    } else if ($(e.currentTarget).is("#dining")) {
+      $("#dining").attr("href", `/dining${query}`);
     } else if ($(e.currentTarget).is("#media")) {
       $("#media").attr("href", `/media${query}`);
-    } else if ($(e.currentTarget).is("#map")) {
-      $("#map").attr("href", `/map${query}`);
     } // End else if statements
   }); // End on click function
 
