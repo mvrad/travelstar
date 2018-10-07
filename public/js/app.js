@@ -63,7 +63,7 @@ $(() => {
     `<h3>${from} &ndash; ${to}</h3>`
   ); // End append()
 
-  // Get Destination ID
+  // Get destination id
   $("#destination").keyup(() => {
     let search = $("#destination").val().toLowerCase().trim(),
       value = $.trim($("#destination").val()),
@@ -126,7 +126,7 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
-  // Get Attractions POI information on click
+  // Get attractions POI information on click
   $("#attractions-main").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
@@ -193,7 +193,7 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
-  // Get destination results for activities
+  // Get destination results for dining
   if (window.location.href.indexOf("dining") > -1) {
     let idSearch = $("#dest-id").text(),
       diningSearch = "places/list?parents=" + idSearch + "&categories=eating&limit=20";
@@ -234,7 +234,7 @@ $(() => {
     }); // End Sygic API Search
   }; // End window.onload function
 
-  // Get Dining POI information on click
+  // Get dining POI information on click
   $("#dining-main").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
