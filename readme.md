@@ -1,7 +1,7 @@
 # TravelStar
 ![screenshot](public/img/screenshot.jpg)
 
-Search points of interest, attractions, media, and maps of different locations around the world.
+Search top ten attractions, top twenty activities, dining options, and photos of different locations around the world.
 ## Under the Hood
 Made with :coffee: and Visual Studio Code in a Linux OS.
 ## To Set Up Locally
