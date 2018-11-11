@@ -11,6 +11,7 @@ You can take all the files of this site and run them on your computer as if it w
 * [Composer](https://getcomposer.org/)
 * [Homestead](https://laravel.com/docs/5.6/homestead)
 * [Laravel 5.6](https://laravel.com/)
+
 To copy the repository's files from here onto your computer and to view and serve those files locally, at your computer's command line type:
 ```
 git clone https://github.com/matthew-conrad/travelstar.git
