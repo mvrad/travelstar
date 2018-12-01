@@ -238,7 +238,6 @@ $(() => {
   $("#dining-main").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
-    console.log(idSearch);
     $.ajax({
       type: "GET",
       url: sygicAPI + POISearch,
