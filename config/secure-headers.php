@@ -102,7 +102,7 @@ return [
      */
 
     'hsts' => [
-        'enable' => false,
+        'enable' => true,
 
         'max-age' => 15552000,
 
