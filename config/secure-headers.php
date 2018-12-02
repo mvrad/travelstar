@@ -80,9 +80,9 @@ return [
      */
 
     'clear-site-data' => [
-        'enable' => false,
+        'enable' => true,
 
-        'all' => false,
+        'all' => true,
 
         'cache' => true,
 
@@ -104,9 +104,10 @@ return [
     'hsts' => [
         'enable' => true,
 
-        'max-age' => 15552000,
+        // This age is what Chromium Project wants to see
+        'max-age' => 63072000,
 
-        'include-sub-domains' => false,
+        'include-sub-domains' => true,
     ],
 
     /*
