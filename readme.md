@@ -8,6 +8,9 @@
   Search top ten attractions, top twenty activities, dining options, and photos of different locations around the world.
 </p>
 <p style="text-align: center">
+  <a href="https://circleci.com/gh/matthew-conrad/travelstar">
+    <img src="https://circleci.com/gh/matthew-conrad/travelstar.svg?style=svg" alt="Security Header Grade">
+  </a>
   <a href="https://securityheaders.io/?q=https://travelstar.herokuapp.com&hide=on&followRedirects=on">
     <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://travelstar.herokuapp.com" alt="Security Header Grade">
   </a>
