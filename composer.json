@@ -23,7 +23,7 @@
         "classmap": [
             "database/seeds",
             "database/factories",
-            "src/"
+            "./vendor/bin/phpunit"
         ],
         "psr-4": {
             "App\\": "app/"
