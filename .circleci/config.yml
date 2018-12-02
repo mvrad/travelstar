@@ -53,11 +53,3 @@ jobs:
           paths:
             - node_modules
             - ~/.yarn
-
-      # run tests with phpunit or codecept
-      #- run: ./vendor/bin/phpunit
-      - run: ./vendor/bin/phpunit
-      - store_test_results:
-          path: tests/_output
-      - store_artifacts:
-          path: tests/_output
