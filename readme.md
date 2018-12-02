@@ -1,7 +1,18 @@
-# TravelStar
-![screenshot](public/img/screenshot.jpg)
+<p style="text-align: center">
+  <a href="https://travelstar.herokuapp.com">
+    <img alt="TravelStar" src="https://travelstar.herokuapp.com/img/travelstar-logo.svg" width="60" />
+  </a>
+</p>
+<h1 style="text-align: center">TravelStar</h1>
+<p style="text-align: center">
+  Search top ten attractions, top twenty activities, dining options, and photos of different locations around the world.
+</p>
+<p style="text-align: center">
+  <a href="https://securityheaders.io/?q=https://travelstar.herokuapp.com&hide=on&followRedirects=on">
+    <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://travelstar.herokuapp.com" alt="Security Header Grade">
+  </a>
+</p>
 
-Search top ten attractions, top twenty activities, dining options, and photos of different locations around the world.
 ## Under the Hood
 Made with :coffee: and Visual Studio Code in a Linux OS.
 ## To Set Up Locally
