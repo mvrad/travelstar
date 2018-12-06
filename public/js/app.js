@@ -100,16 +100,21 @@ $(() => {
           $("#attractions-main__left-list li").append(
             `<div class=attractions-main__left-list_container-num>
             </div>
-            <div class=attractions-main__left-list_container-content>
-            <img src=${places[i].thumbnail_url}>
-            <h3>${i + 1}. ${places[i].name}</h3>
+            <div class=attractions-main__left-list_container-content>` +
+            ((`${places[i].thumbnail_url}` === "null") ? 
+              `<img src="/img/travelstar-logo.svg" style="width: 150px">` : 
+              `<img src=${places[i].thumbnail_url}>`) +
+            `<h3>${i + 1}. ${places[i].name}</h3>
             </div>`
           ); // End append on left
         }); // End $.each() function
         $(".attractions-main__right").append(
           `<br>
-          <h1>${places[0].name}</h1>
-          <img src=${places[0].thumbnail_url}>
+          <h1>${places[0].name}</h1>` +
+          ((`${places[0].thumbnail_url}` === "null") ? 
+          `<img src="/img/travelstar-logo.svg" style="width: 150px">` : 
+          `<img src=${places[0].thumbnail_url}>`) +
+        `<br>
           <br>
           <p>
           <span class=bold>Local Name: </span>${places[0].original_name}
@@ -142,8 +147,6 @@ $(() => {
           $(".attractions-main__right").append(
             `<br>
             <h1>${place.name}</h1>
-            <img src=${place.thumbnail_url}>
-            <br>
             <p>
             <span class=bold>Local Name: </span>${place.original_name}
             <br>
@@ -208,17 +211,21 @@ $(() => {
           $("#dining-main__left-list li").append(
             `<div class=dining-main__left-list_container-num>
             </div>
-            <div class=dining-main__left-list_container-content>
-            <img src=${dining[i].thumbnail_url}>
-            <h3>${i + 1}. ${dining[i].name}</h3>
+            <div class=dining-main__left-list_container-content>` +
+            ((`${dining[i].thumbnail_url}` === "null") ? 
+              `<img src="/img/travelstar-logo.svg" style="width: 150px">` : 
+              `<img src=${dining[i].thumbnail_url}>`) +
+            `<h3>${i + 1}. ${dining[i].name}</h3>
             </div>`
           ); // End append on left
         }); // End $.each() function
         $(".dining-main__right").append(
           `<br>
-          <h1>${dining[0].name}</h1>
-          <img src=${dining[0].thumbnail_url}>
-          <br>
+          <h1>${dining[0].name}</h1>` +
+          ((`${dining[0].thumbnail_url}` === "null") ? 
+          `<img src="/img/travelstar-logo.svg" style="width: 150px">` : 
+          `<img src=${dining[0].thumbnail_url}>`) +
+          `<br>
           <p>
           <span class=bold>Local Name: </span>${dining[0].original_name}
           <br>
@@ -249,9 +256,9 @@ $(() => {
           $(".dining-main__right").empty();
           $(".dining-main__right").append(
             `<br>
-            <h1>${place.name}</h1>
-            <img src=${place.thumbnail_url}>
-            <br>
+            <h1>${place.name}</h1>` +
+            ((place.thumbnail_url === "null") ? `<img src=${"./img/travelstar-logo.svg"}` : `<img src=${place.thumbnail_url}>`) +
+            `<br>
             <p>
             <span class=bold>Local Name: </span>${place.original_name}
             <br>
