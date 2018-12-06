@@ -114,8 +114,7 @@ $(() => {
           ((`${places[0].thumbnail_url}` === "null") ? 
           `<img src="/img/travelstar-logo.svg" style="width: 150px">` : 
           `<img src=${places[0].thumbnail_url}>`) +
-        `<br>
-          <br>
+          `<br>
           <p>
           <span class=bold>Local Name: </span>${places[0].original_name}
           <br>
@@ -132,7 +131,7 @@ $(() => {
   }; // End window.onload function
 
   // Get attractions POI information on click
-  $("#attractions-main").on("click", "img", (e) => {
+  $("#attractions-main__left-list").on("click", "img", (e) => {
     let idSearch = $(e.currentTarget).attr("src").split("/")[4],
       POISearch = "places/" + idSearch;
     $.ajax({
@@ -147,6 +146,8 @@ $(() => {
           $(".attractions-main__right").append(
             `<br>
             <h1>${place.name}</h1>
+            <img src=${place.thumbnail_url}>
+            <br>
             <p>
             <span class=bold>Local Name: </span>${place.original_name}
             <br>
@@ -257,7 +258,9 @@ $(() => {
           $(".dining-main__right").append(
             `<br>
             <h1>${place.name}</h1>` +
-            ((place.thumbnail_url === "null") ? `<img src=${"./img/travelstar-logo.svg"}` : `<img src=${place.thumbnail_url}>`) +
+            ((place.thumbnail_url === "null") ?
+              `<img src=${"./img/travelstar-logo.svg"}` :
+              `<img src=${place.thumbnail_url}>`) +
             `<br>
             <p>
             <span class=bold>Local Name: </span>${place.original_name}
