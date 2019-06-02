@@ -6,7 +6,6 @@
 <h1 align="center">
   TravelStar
 </h1>
-
 <h2 align="center">
   Your destination for travel information.
 </h2>
