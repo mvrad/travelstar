@@ -3,12 +3,10 @@
     <img alt="Gatsby" src="public/img/travelstar-logo.svg" width="84" />
   </a>
 </p>
-<h1 align="center">
-  TravelStar
-</h1>
-<h2 align="center">
-  Your destination for travel information.
-</h2>
+<div align="center">
+  <h1>TravelStar</h1>
+  <h2>Your destination for travel information.</h2>
+</div>
 <p align="center">
   <a href="https://github.com/matthew-conrad/travelstar/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="TravelStar is released under the MIT license.">
