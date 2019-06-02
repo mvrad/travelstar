@@ -5,7 +5,7 @@
 </p>
 <div align="center">
   <h1>TravelStar</h1>
-  <h2>Your destination for travel information.</h2>
+  <h3>Your destination for travel information.</h3>
 </div>
 <p align="center">
   <a href="https://github.com/matthew-conrad/travelstar/blob/master/LICENSE">
