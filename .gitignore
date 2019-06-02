@@ -13,3 +13,4 @@ yarn-error.log
 .env
 composer.lock
 config.js
+public\styles\.sass-cache
