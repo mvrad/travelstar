@@ -72,9 +72,6 @@ $(() => {
       $.ajax({
         type: "GET",
         url: sygicAPI + querySearch,
-        xhrFields: {
-          withCredentials: true
-        },
         headers: {"x-api-key": akey},
         dataType: "json",
         success: (data) => {
@@ -95,9 +92,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + topTenPOI,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
@@ -143,9 +137,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + POISearch,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
@@ -180,9 +171,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + tourSearch,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
@@ -216,9 +204,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + diningSearch,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
@@ -264,9 +249,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + POISearch,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
@@ -303,9 +285,6 @@ $(() => {
     $.ajax({
       type: "GET",
       url: sygicAPI + mediaSearch,
-      xhrFields: {
-        withCredentials: true
-      },
       headers: {"x-api-key": akey},
       dataType: "json",
       success: (data) => {
