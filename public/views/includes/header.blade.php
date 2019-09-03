@@ -12,12 +12,6 @@
     </button>
   </div>
 </nav>
-<!-- <div class="menu-sm">
-  <ul class="mobile-dropdown">
-    <li><a href='/'>Home</a></li>
-    <li><a href='/about'>About</a></li>
-  </ul>
-</div> -->
 <!-- Header Desktop -->
 <div class="nav-lg">
   <img id="main-logo-lg" src="img/travelstar-logo.svg" alt="TravelStar">

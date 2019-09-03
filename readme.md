@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://travelstar.herokuapp.com">
-    <img alt="Gatsby" src="public/img/travelstar-logo.svg" width="84" />
+    <img alt="Gatsby" src="public/img/travelstar-logo.svg" height="180px" width="auto" />
   </a>
 </p>
 <div align="center">
@@ -16,9 +16,6 @@
   </a>
   <a href="https://securityheaders.io/?q=https://travelstar.herokuapp.com&hide=on&followRedirects=on">
     <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://travelstar.herokuapp.com" alt="Security Header Grade">
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=mc0nrad">
-    <img src="https://img.shields.io/twitter/follow/travelstar.svg?label=Follow%20@mc0nrad" alt="Follow @mc0nrad">
   </a>
 </p>
 
@@ -37,10 +34,9 @@ To copy the repository's files from here onto your computer and to view and serv
 ```
 git clone https://github.com/mvrad/travelstar.git
 ```
-Open the files in a text editor such as [Visual Studio Code](https://code.visualstudio.com/) and, if you have access to [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), in the terminal type:
+Install composer then open the files in a text editor such as [Visual Studio Code](https://code.visualstudio.com/) and in the terminal type:
 ```bash
-php composer.phar install
-php composer.phar update
+composer install
 ```
 After installing Homestead, launch the Vagrant VM from within the Homestead directory in the terminal with:
 ```bash

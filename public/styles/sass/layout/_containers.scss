@@ -91,14 +91,15 @@ input[type=text]:focus {
 input[type=submit] {
   height: 42px;
   color: #fff;
-  background-color: #000080;
+  background-color: #1414cc;
   border: none;
   border-radius: 5px;
   font-weight: 700;
 }
 
 input[type=submit]:hover {
-  background-color: #1414cc;
+  color: #000;
+  background-color: #87ceeb;
   transition: 0.4s;
 }
 
