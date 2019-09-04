@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://travelstar.herokuapp.com">
-    <img alt="Gatsby" src="public/img/travelstar-logo.svg" height="180px" width="auto" />
+    <img alt="Logo" src="public/img/travelstar-logo.svg" height="180px" width="auto" />
   </a>
 </p>
 <div align="center">
