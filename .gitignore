@@ -12,5 +12,6 @@ npm-debug.log
 yarn-error.log
 .env
 composer.lock
+.DS_Store
 config.js
 public\styles\.sass-cache
