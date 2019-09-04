@@ -11,7 +11,7 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
-composer.lock
+# composer.lock
 .DS_Store
-config.js
+# config.js
 public\styles\.sass-cache
