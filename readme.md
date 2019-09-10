@@ -26,7 +26,7 @@ Search top ten attractions, top twenty activities, dining options, and photos of
 ## App Preview
 
 <div align="center">
-  <img alt="TravelStar App Preview" src="public/img/travelstar_min.gif" width="auto" height="auto">
+  <img alt="TravelStar App Preview" src="public/img/travelstar.gif" width="auto" height="auto">
 </div>
 
 ## To Set Up Locally
