@@ -15,7 +15,7 @@
     <img src="https://circleci.com/gh/mvrad/travelstar.svg?style=shield" alt="Current CircleCI build status.">
   </a>
   <a href="https://securityheaders.io/?q=https://travelstar.herokuapp.com&hide=on&followRedirects=on">
-    <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://travelstar.herokuapp.com" alt="Security Header Grade">
+    <img src="https://img.shields.io/security-headers?url=https%3A%2F%2Ftravelstar.herokuapp.com" alt="Security Header Grade">
   </a>
 </p>
 
